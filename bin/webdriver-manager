@@ -1,0 +1,81 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var optimist = require('optimist');
+
+var SELENIUM_DIR =  path.resolve(__dirname, '../selenium');
+
+
+// XXX Hack to list available binaries
+var WebdriverManager = require(path.join(__dirname, '..', 'lib', 'index'));
+
+var cli = optimist.
+  usage('Usage: webdriver-manager <command>\n' +
+        'Commands:\n' +
+        '  update: install or update selected binaries\n' +
+        '  start: start up the selenium server\n' +
+        '  status: list the current available drivers').
+        describe('out_dir', 'Location to output/expect ').
+        default('out_dir', SELENIUM_DIR).
+        describe('seleniumPort', 'Optional port for the selenium standalone server').
+        describe('proxy', 'proxy to use for the install or update command');
+
+var webdriverManager = new WebdriverManager(SELENIUM_DIR);
+
+var binaries = webdriverManager.binaries;
+
+for (var bin in binaries) {
+  cli.describe(bin, 'install or update ' + binaries[bin].name).
+    boolean(bin).
+    default(bin, binaries[bin].isDefault);
+}
+
+var argv = cli.
+  check(function(arg) {
+  if (arg._.length != 1) {
+    throw 'Please specify one command';
+  }
+}).
+  argv;
+
+webdriverManager = new WebdriverManager(argv.out_dir || SELENIUM_DIR, argv.proxy);
+
+function status () {
+  var binaries = webdriverManager.status();
+  for (var name in binaries) {
+    bin = binaries[name];
+    if (bin === 'exists') {
+      console.log(name + ' is up to date');
+    } else if (bin === 'outdated') {
+      console.log('**' + name + ' needs to be updated');
+    } else {
+      console.log(name + ' is not present');
+    }
+  }
+}
+
+switch (argv._[0]) {
+  case 'start':
+    webdriverManager.start(argv.seleniumPort);
+  break;
+  case 'status':
+    status();
+  break;
+  case 'update':
+
+    var installlables = Object.keys(argv).filter(function (key) {
+      return argv[key] && ( key === 'standalone' || key === 'chrome' || key === 'ie' );
+    });
+
+    webdriverManager.update(installlables, function (err, result) {
+      if (err) {
+        console.log('Installation failed', err);
+        return;
+      }
+      console.log('The following files were installed: ' + result.join(' '));
+    });
+    break;
+  default:
+    console.error('Invalid command');
+  optimist.showHelp();
+}
