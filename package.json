@@ -12,5 +12,9 @@
     "type": "git",
     "url": "git@github.com:pose/webdriver-manager.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "scripts": {
+    "webdriver-manager": "bin/webdriver-manager"
+  }
 }
