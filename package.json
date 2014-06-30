@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "main": "./lib/index.js",
-  "scripts": {
+  "bin": {
     "webdriver-manager": "bin/webdriver-manager"
   }
 }
