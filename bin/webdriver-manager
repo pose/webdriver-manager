@@ -38,7 +38,7 @@ var argv = cli.
 }).
   argv;
 
-webdriverManager = new WebdriverManager(argv.out_dir || SELENIUM_DIR, argv.proxy);
+webdriverManager = new WebdriverManager(argv.out_dir || SELENIUM_DIR, argv.proxy);
 
 function status () {
   var binaries = webdriverManager.status();
