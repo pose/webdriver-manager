@@ -13,8 +13,8 @@ wm.install(['standalone', 'chrome'], function (err, filenames) {
   // { standalone: 'ready', chrome: 'ready', ie: 'not present' }
   console.log(wm.status());
 
-  // Start selenium
-  wm.start();
+  // Start selenium (close on input received in stdin)
+  wm.start({closeOnStdinInput: true});
 });
 
 

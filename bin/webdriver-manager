@@ -56,7 +56,7 @@ function status () {
 
 switch (argv._[0]) {
   case 'start':
-    webdriverManager.start(argv.seleniumPort);
+    webdriverManager.start({seleniumPort: argv.seleniumPort, closeOnStdinInput: true});
   break;
   case 'status':
     status();
