@@ -6,6 +6,11 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 
 ## Changelog
 
+### [5.0.0] - 2015-04-18
+
+#### Changed
+ - Updated `chromedriver` version to `2.15`. (`Nicolas PENNEC`)
+
 ### [4.0.0] - 2015-04-14
 
 #### Added
