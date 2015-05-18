@@ -6,6 +6,9 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 
 ## Changelog
 
+### [5.1.0] - 2015-05-18
+ - Added optional callback to `start(options, cb)` method. `cb` will be executed once selenium server has started.
+
 ### [5.0.0] - 2015-04-18
 
 #### Changed
