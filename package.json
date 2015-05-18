@@ -1,6 +1,6 @@
 {
   "name": "webdriver-manager",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Protactor's webdriver-manager as a standalone Node.js module.",
   "dependencies": {
     "adm-zip": "^0.4.4",
