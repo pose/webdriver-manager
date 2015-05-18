@@ -14,7 +14,10 @@ wm.install(['standalone', 'chrome'], function (err, filenames) {
   console.log(wm.status());
 
   // Start selenium (close on input received in stdin)
-  wm.start({closeOnStdinInput: true});
+  wm.start({closeOnStdinInput: true}, function (err) {
+    console.log('Selenium started. Exiting now.');
+    wm.stop();
+  });
 });
 
 
