@@ -7,13 +7,22 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 ## Changelog
 
 ### [6.0.0] - 2015-06-09
+
+#### Added
+
  - Configuration of versions externalized to a `config.json` file. (`Nicolas PENNEC`)
  - Updated `selenium` to `2.46`, `chromedriver` to `2.16` and `iedriver` to `2.46.0`. (`Nicolas PENNEC`)
 
 ### [5.2.0] - 2015-05-19
+
+#### Added
+
  - Added `WebdriverManager` constructor third argument: `quiet` (default: `false`). Supresses writing to both `stdout` and `stderr`.
 
 ### [5.1.0] - 2015-05-18
+
+#### Added
+
  - Added optional callback to `start(options, cb)` method. `cb` will be executed once selenium server has started.
 
 ### [5.0.0] - 2015-04-18
