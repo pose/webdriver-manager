@@ -10,7 +10,7 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 
 ### Fixed
 
- - `start` callback was not executed: The start up message of Selenium was updated in version `2.46` (from `Started SocketListener` to `Selenium Server is up and running`). Regex was fixed to handle that case.
+ - `start` callback was not executed: The start up message of Selenium was updated in version `2.46` (from `Started SocketListener` to `Selenium Server is up and running`). Regex was fixed to handle that case. (Fixed https://github.com/pose/webdriver-manager/issues/12)
 
 ### [6.0.0] - 2015-06-09
 
