@@ -6,6 +6,11 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 
 ## Changelog
 
+### [7.0.0] - 2015-07-19
+
+#### Changed
+ - Changed how `wm.install` callback (`function (err, filenames) { }`) is called: `filenames` argument now contains only non-undefined values.
+
 ### [6.0.2] - 2015-07-08
 
 ### Fixed
