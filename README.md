@@ -2,7 +2,7 @@
 
 Protactor's `webdriver-manager` as a standalone Node.js module.
 
-**Warning:** The official protractor webdriver-manager can be found here: https://github.com/angular/protractor/blob/master/bin/webdriver-manager
+**Warning:** This is a fork. The official protractor webdriver-manager can be found here: https://github.com/angular/protractor/blob/master/bin/webdriver-manager
 
 ## Changelog
 
