@@ -1,4 +1,4 @@
-var WebdriverManager = require('./lib/index');
+var WebdriverManager = require('../lib/index');
 
 var wm = new WebdriverManager('my-selenium-path');
 
@@ -6,7 +6,7 @@ var wm = new WebdriverManager('my-selenium-path');
 console.log(wm.status());
 
 // Install Selenium Standalone and Google Chrome
-wm.install(['standalone', 'chrome'], function (err, filenames) {
+wm.install(['standalone', 'chromedriver-nw'], function (err, filenames) {
 
   console.log(filenames);
 
@@ -19,6 +19,7 @@ wm.install(['standalone', 'chrome'], function (err, filenames) {
     wm.stop();
   });
 });
+
 
 
 
