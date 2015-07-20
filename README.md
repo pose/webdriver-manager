@@ -6,6 +6,12 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 
 ## Changelog
 
+### [7.0.1] - 2015-07-20
+
+### Fixed
+
+ - Repaired chromedriver-nw CLI installation and detection. (`Todd Wolfson`)
+
 ### [7.0.0] - 2015-07-19
 
 #### Changed
