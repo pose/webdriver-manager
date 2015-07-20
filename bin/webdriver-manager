@@ -64,7 +64,7 @@ switch (argv._[0]) {
   case 'update':
 
     var installlables = Object.keys(argv).filter(function (key) {
-      return argv[key] && ( key === 'standalone' || key === 'chrome' || key === 'ie' );
+      return argv[key] && ( key === 'standalone' || key === 'chrome' || key === 'chromedriver-nw' || key === 'ie' );
     });
 
     webdriverManager.update(installlables, function (err, result) {
