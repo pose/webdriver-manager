@@ -1,5 +1,7 @@
 # Webdriver Manager
 
+[![Join the chat at https://gitter.im/pose/webdriver-manager](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pose/webdriver-manager?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Protactor's `webdriver-manager` as a standalone Node.js module.
 
 **Warning:** This is a fork. The official protractor webdriver-manager can be found here: https://github.com/angular/protractor/blob/master/bin/webdriver-manager
