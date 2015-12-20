@@ -8,9 +8,16 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 
 ## Changelog
 
+### [8.0.0] - 2015-12-20
+
+#### Changed
+
+ - Multiple Updates: Selenium to 2.48.2, Chromedriver to 2.20, IEDriver to
+   2.48.0, Chromedriver-nw to 0.12.3. (`Todd Wolfson`)
+
 ### [7.0.1] - 2015-07-20
 
-### Fixed
+#### Fixed
 
  - Repaired chromedriver-nw CLI installation and detection. (`Todd Wolfson`)
 
@@ -22,7 +29,7 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 
 ### [6.0.2] - 2015-07-08
 
-### Fixed
+#### Fixed
 
  - `start` callback was not executed: Selenium start up message was updated in version `2.46` (from `Started SocketListener` to `Selenium Server is up and running`). Regex was fixed to handle that case. (Fixed https://github.com/pose/webdriver-manager/issues/12)
 
