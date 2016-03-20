@@ -8,6 +8,13 @@ Protactor's `webdriver-manager` as a standalone Node.js module.
 
 ## Changelog
 
+### [9.0.0] - 2016-03-20
+
+#### Changed
+
+ - Multiple version updates: Selenium to 2.52.0, Chromedriver to 2.21, IEDriver
+   to 2.52.2 and Chromedrive-nw to 0.13.0. (`Jérôme Macias`)
+
 ### [8.0.0] - 2015-12-20
 
 #### Changed
