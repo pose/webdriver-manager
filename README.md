@@ -1,5 +1,13 @@
 # Webdriver Manager
 
+**News**: [`webdriver-manager`](https://github.com/angular/webdriver-manager) is now an official Angular project!
+
+If your `webdriver-manager` version is `<=9`, this repository contains the source code you are looking for. For versions `>=10` please visit: https://github.com/angular/webdriver-manager.
+
+This repository will is on maintenance mode only addressing bug fixes for `<=9` version bugs. All new feature development can be found at:  https://github.com/angular/webdriver-manager
+
+---
+
 [![Join the chat at https://gitter.im/pose/webdriver-manager](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pose/webdriver-manager?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Protactor's `webdriver-manager` as a standalone Node.js module.
